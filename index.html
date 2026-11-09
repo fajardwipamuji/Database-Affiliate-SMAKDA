@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktik Affiliate Agribisnis Ternak SMAKDA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .tab-active { border-bottom: 4px solid #16a34a; color: #16a34a; font-weight: 700; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        
+        /* Custom Scrollbar for the table */
+        .table-scroll::-webkit-scrollbar { height: 8px; }
+        .table-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col relative">
+    
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-green-800 to-green-600 text-white shadow-xl">
+        <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold tracking-tight"><i class="fas fa-video mr-3"></i>Project Video Affiliate</h1>
+                <p class="text-green-100 mt-2 text-lg">Agribisnis Ternak - SMKN 2 Purbalingga (SMAKDA)</p>
+            </div>
+            <div class="mt-4 md:mt-0 flex items-center bg-white/20 px-4 py-2 rounded-lg border border-white/30 shadow-sm">
+                <div class="bg-white text-green-700 rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl mr-3">
+                    F
+                </div>
+                <div>
+                    <p class="text-xs text-green-100 uppercase tracking-wider font-semibold">Instruktur Utama</p>
+                    <p class="font-bold text-white">Bapak Fajar S.Pt.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigasi -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto px-6 flex justify-center space-x-4 md:space-x-8 overflow-x-auto">
+            <button onclick="switchTab('materi')" id="tab-materi" class="tab-btn tab-active px-4 py-4 text-gray-500 font-semibold hover:text-green-600 transition whitespace-nowrap">
+                <i class="fas fa-book-open mr-2"></i>Materi Pembelajaran
+            </button>
+            <button onclick="switchTab('tugas')" id="tab-tugas" class="tab-btn px-4 py-4 text-gray-500 font-semibold hover:text-green-600 transition whitespace-nowrap">
+                <i class="fas fa-tasks mr-2"></i>Instruksi Tugas
+            </button>
+            <button onclick="switchTab('laporan')" id="tab-laporan" class="tab-btn px-4 py-4 text-gray-500 font-semibold hover:text-green-600 transition whitespace-nowrap">
+                <i class="fas fa-paper-plane mr-2"></i>Kirim Laporan
+            </button>
+        </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main class="flex-grow max-w-6xl mx-auto px-6 py-10 w-full">
+        
+        <!-- MATERI -->
+        <section id="content-materi" class="content-section animate-fade-in">
+            <div class="glass-card rounded-2xl shadow-lg p-8 border border-gray-100">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-4">Panduan Sukses Affiliate Peternakan</h2>
+                
+                <div class="space-y-8 text-gray-700 leading-relaxed">
+                    
+                    <!-- Intro & Hook -->
+                    <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+                        <h3 class="text-xl font-bold text-green-800 mb-3"><i class="fas fa-fish mr-2"></i>Apa itu Hook dalam Video?</h3>
+                        <p><strong>Hook</strong> adalah 3-5 detik pertama dalam video yang bertugas "menangkap" perhatian penonton. Jika hook gagal, penonton akan langsung *scroll* melewati video kalian.</p>
+                        <h4 class="font-bold mt-4 mb-2 text-green-900">Contoh Hook Produk Peternakan:</h4>
+                        <ul class="list-disc ml-6 space-y-2">
+                            <li><strong>Super Feeder:</strong> "Ayam kalian pakannya sering tumpah dan rugi banyak? Tonton ini sebelum bangkrut!"</li>
+                            <li><strong>Bibit Chick Feeder:</strong> "Rahasia DOC cepat besar tanpa berebut pakan, peternak pemula wajib tahu alat ini!"</li>
+                            <li><strong>Vaksin/Vitamin:</strong> "Satu kandang tumbang karena penyakit? Ini cara saya selamatkan ribuan ekor cuma pakai modal kecil."</li>
+                        </ul>
+                    </div>
+
+                    <!-- Motivasi & Fakta -->
+                    <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3"><i class="fas fa-trophy mr-2"></i>Fakta & Motivasi Sukses Murid SMK</h3>
+                        <p>Menjadi murid SMK bukan halangan untuk berpenghasilan fantastis dari HP kalian.</p>
+                        <ul class="list-disc ml-6 mt-2 space-y-2">
+                            <li><strong>Kisah Nyata SMKN 1 Purbalingga:</strong> Terdapat murid yang sudah berhasil mencetak <strong>KOMISI BERSIH hingga Rp50 Juta!</strong> Ingat, ini adalah komisi (keuntungan nyata yang masuk kantong), bukan sekadar GMV/total omzet penjualan.</li>
+                            <li>Kuncinya adalah konsistensi, paham algoritma, dan membuat video yang *problem solving* (menyelesaikan masalah peternak lain).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Referensi Soft Selling & Embed Video -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-lightbulb text-yellow-500 mr-2"></i>Soft Selling: Jualan Tanpa Kelihatan Jualan</h3>
+                        <p class="mb-4">Membuat video affiliate <strong>tidak harus selalu *hard selling*</strong> (jualan blak-blakan atau memaksa orang beli). Teknik *soft selling*—seperti membagikan aktivitas keseharian di kandang, bercerita, atau memberikan edukasi santai—justru seringkali lebih efektif dan disukai algoritma. Coba perhatikan contoh referensi video *soft selling* di bawah ini:</p>
+                        
+                        <div class="flex justify-center bg-gray-900 p-4 rounded-xl shadow-inner max-w-sm mx-auto">
+                            <!-- Embed YouTube Shorts -->
+                            <iframe width="100%" height="599" class="rounded-lg aspect-[9/16] w-full" src="https://www.youtube.com/embed/4qLYA6TSW2I" title="Ibarat ngajarin ikan berenang 🤭" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Contoh Skrip 1 Menit -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-file-video text-red-500 mr-2"></i>Contoh Skrip Video 1 Menit (Acuan Praktik)</h3>
+                        <p class="mb-4">Berikut adalah acuan detail menyusun video tanpa musik, murni mengandalkan suara asli (*voice over*), *sound effect* sederhana, dan pergantian visual (Shot). Topik: <strong>Tempat Pakan Super Feeder</strong>.</p>
+                        
+                        <div class="overflow-x-auto table-scroll">
+                            <table class="w-full text-sm text-left border-collapse border border-gray-200">
+                                <thead>
+                                    <tr class="bg-gray-100 text-gray-800">
+                                        <th class="border border-gray-300 p-3 w-16">Waktu</th>
+                                        <th class="border border-gray-300 p-3 w-1/4">Tipe Shot & Angle</th>
+                                        <th class="border border-gray-300 p-3 w-1/4">Visual & Teks Layar</th>
+                                        <th class="border border-gray-300 p-3 w-1/3">Audio (Voice Over & Efek)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-300 p-3 font-bold text-center">00 - 05s</td>
+                                        <td class="border border-gray-300 p-3"><strong>Close Up (Eye level):</strong> Lantai kandang yang kotor dipenuhi pakan yang tumpah.</td>
+                                        <td class="border border-gray-300 p-3"><strong>Teks (Tengah):</strong> "RUGI BANDAR GARA-GARA INI!"</td>
+                                        <td class="border border-gray-300 p-3"><strong>VO (Nada Kesal):</strong> "Ayam kalian pakannya sering tumpah dan rugi banyak kayak gini?"<br><br><em>SFX: Suara ayam berkokok kaget / 'Buzzer' salah.</em></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 p-3 font-bold text-center">05 - 15s</td>
+                                        <td class="border border-gray-300 p-3"><strong>Medium Shot:</strong> Menampilkan wajah kreator memegang tempat pakan tradisional yang jelek.</td>
+                                        <td class="border border-gray-300 p-3"><strong>Teks:</strong> "Tempat pakan biasa = Boros"</td>
+                                        <td class="border border-gray-300 p-3"><strong>VO:</strong> "Dulu saya juga gitu, pakai tempat pakan biasa malah banyak yang kebuang ke sekam, diinjek-injek ayam."</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 p-3 font-bold text-center">15 - 30s</td>
+                                        <td class="border border-gray-300 p-3"><strong>Close Up (High Angle):</strong> Mengarahkan kamera ke produk 'Super Feeder' yang bersih & estetik.</td>
+                                        <td class="border border-gray-300 p-3"><strong>Teks (Pop-up):</strong> "Solusinya: Super Feeder Anti Tumpah"</td>
+                                        <td class="border border-gray-300 p-3"><strong>VO (Nada Antusias):</strong> "Untung sekarang saya nemu Super Feeder ini. Desainnya melengkung ke dalam, jadi pakan nggak gampang dikais ayam keluar."<br><br><em>SFX: Suara 'Ting' (Kling) ide muncul.</em></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 p-3 font-bold text-center">30 - 50s</td>
+                                        <td class="border border-gray-300 p-3"><strong>Medium Shot:</strong> Mendemonstrasikan menuang pakan, lalu memperlihatkan ayam makan dengan rapi.</td>
+                                        <td class="border border-gray-300 p-3"><strong>Teks:</strong> "Kandang bersih, pakan awet, untung maksimal."</td>
+                                        <td class="border border-gray-300 p-3"><strong>VO:</strong> "Lihat nih, pas ayam makan, pakannya tetep aman di dalam wadah. FCR ayam jadi bagus, kandang juga lebih bersih dari jamur pakan sisa."<br><br><em>SFX: Suara natural ayam makan mematuk-matuk (ASMR).</em></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 p-3 font-bold text-center">50 - 60s</td>
+                                        <td class="border border-gray-300 p-3"><strong>Close Up:</strong> Jari menunjuk ke arah pojok kiri bawah layar (arah keranjang kuning).</td>
+                                        <td class="border border-gray-300 p-3"><strong>Teks (Animasi Panah):</strong> "Cek Keranjang Kuning Kiri Bawah!"</td>
+                                        <td class="border border-gray-300 p-3"><strong>VO:</strong> "Mumpung lagi ada diskon peternak, yang mau kandangnya efisien langsung aja klik keranjang kuning di bawah ya!"<br><br><em>SFX: Suara 'Whoosh' (Transisi panah).</em></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TUGAS -->
+        <section id="content-tugas" class="content-section hidden animate-fade-in">
+            <div class="glass-card rounded-2xl shadow-lg p-8 border border-gray-100">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-4">Instruksi & Langkah Produksi</h2>
+                
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2"><span class="bg-green-600 text-white px-3 py-1 rounded-lg mr-2">1</span> Penulisan Skrip & Persiapan</h3>
+                        <p class="text-gray-600">Tentukan 1 produk (diutamakan produk peternakan/pertanian). Tulis skrip ringan maksimal 1 menit dengan mematuhi struktur: <strong>Hook (Tarik perhatian) + Konteks/Edukasi (Soft Selling) + Call to Action (Arahkan ke link/keranjang)</strong>. Buka menu materi untuk melihat contoh tabel skrip.</p>
+                    </div>
+                    
+                    <!-- Penjelasan Detail Produksi & Editing -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-green-200 ring-2 ring-green-50">
+                        <h3 class="text-xl font-bold text-green-700 mb-3"><span class="bg-green-600 text-white px-3 py-1 rounded-lg mr-2">2</span> Panduan Syuting & Editing (Wajib Dibaca)</h3>
+                        <div class="text-gray-700 space-y-4">
+                            <p><strong>Saat Syuting (Pengambilan Gambar):</strong></p>
+                            <ul class="list-disc ml-6 space-y-1">
+                                <li>Gunakan kamera HP posisi berdiri (Vertikal / 9:16).</li>
+                                <li>Pastikan pencahayaan terang (syuting di pagi/sore hari memanfaatkan cahaya matahari adalah yang terbaik).</li>
+                                <li>Rekam gambar sepotong-sepotong (per <em>shot</em>) sesuai skrip, tidak perlu langsung dihafal 1 menit *full*.</li>
+                            </ul>
+                            
+                            <p><strong>Saat Editing (Penyuntingan):</strong></p>
+                            <ul class="list-disc ml-6 space-y-1">
+                                <li>Buka aplikasi editing gratis di HP (seperti <strong>CapCut</strong>).</li>
+                                <li><strong>Tidak perlu *editing* yang berat atau efek transisi yang heboh.</strong></li>
+                                <li>Cukup lakukan <em>Cut-to-Cut</em>: Potong bagian depan dan belakang video yang bocor/salah, lalu gabungkan antar <em>shot</em> secara berurutan agar alurnya pas.</li>
+                                <li>Tambahkan <em>Voice Over</em> (rekam suara kalian menceritakan skrip) jika saat syuting suaranya kurang jelas.</li>
+                                <li><strong>Tidak wajib pakai musik latar (BGM).</strong> Terkadang musik malah mengganggu. Fokus saja pada artikulasi suara yang jelas dan tambahkan sedikit <em>Sound Effect</em> (seperti suara "Ting", "Whoosh", atau kokok ayam) untuk memberi nyawa pada video.</li>
+                                <li>Tambahkan teks (*caption/subtitle*) di layar agar pesan tersampaikan meski penonton mengecilkan volume HP.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2"><span class="bg-green-600 text-white px-3 py-1 rounded-lg mr-2">3</span> Upload Video</h3>
+                        <p class="text-gray-600">Upload video yang sudah digabungkan ke platform TikTok, Instagram Reels, atau YouTube Shorts. Jangan lupa tambahkan Link Affiliate atau sematkan Keranjang Kuning pada postingan tersebut.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2"><span class="bg-green-600 text-white px-3 py-1 rounded-lg mr-2">4</span> Kumpulkan Laporan</h3>
+                        <p class="text-gray-600">Salin URL/Link video yang sudah di-<em>publish</em>. Masuk ke menu <strong>Kirim Laporan</strong> di web ini, pilih kelas dan nama kalian, lalu *paste* link tersebut untuk dinilai oleh Bapak.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAPORAN -->
+        <section id="content-laporan" class="content-section hidden animate-fade-in">
+            <div class="max-w-2xl mx-auto glass-card rounded-2xl shadow-lg p-8 border border-gray-100">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800">Kirim Link Video</h2>
+                    <p class="text-gray-500 mt-2">Pastikan nama Anda sesuai dengan data absensi kelas.</p>
+                </div>
+                
+                <form id="form-laporan" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Kelas</label>
+                        <select id="input-kelas" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-white shadow-sm transition outline-none cursor-pointer" onchange="updateDropdownNama()" required>
+                            <option value="" disabled selected>Memuat data kelas dari Spreadsheet...</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Murid</label>
+                        <select id="input-nama" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-white shadow-sm transition outline-none cursor-pointer disabled:bg-gray-100" required disabled>
+                            <option value="" disabled selected>-- Silakan pilih kelas terlebih dahulu --</option>
+                        </select>
+                        <p class="text-xs text-gray-400 mt-1">*Terhubung otomatis dengan database Spreadsheet</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Link Video Affiliate</label>
+                        <input type="url" id="input-link" placeholder="Contoh: https://vt.tiktok.com/xxxxxx" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-white shadow-sm transition outline-none" required>
+                    </div>
+
+                    <button type="button" onclick="submitLaporan()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 mt-4">
+                        <i class="fas fa-paper-plane mr-2"></i> Kirim Tugas Sekarang
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-6 mt-auto">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="font-semibold">&copy; 2026 Hak Cipta Dilindungi.</p>
+            <p class="text-sm mt-1 text-gray-400">Dirancang dan dikembangkan oleh <strong>Bapak Fajar S.Pt.</strong> - SMKN 2 Purbalingga</p>
+        </div>
+    </footer>
+
+    <!-- Logika JavaScript -->
+    <script>
+        // PENTING: Ganti URL di bawah ini dengan URL Web App dari Google Apps Script Anda
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbySb---Jb0HhPdII4BT13dQDOUf78mn_wmrRAls20Ja-Kw-E5US9717T-O70FB6CCFvdw/exec';
+        
+        let databaseSpreadsheet = {};
+
+        // Ambil data murid dari Spreadsheet saat halaman dimuat
+        window.onload = function() {
+            const dropdownKelas = document.getElementById("input-kelas");
+            
+            fetch(SCRIPT_URL)
+                .then(response => response.json())
+                .then(data => {
+                    databaseSpreadsheet = data;
+                    
+                    dropdownKelas.innerHTML = '<option value="" disabled selected>-- Pilih Kelas Anda --</option>';
+                    Object.keys(databaseSpreadsheet).sort().forEach(kelas => {
+                        let option = document.createElement("option");
+                        option.value = kelas;
+                        option.textContent = kelas;
+                        dropdownKelas.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    dropdownKelas.innerHTML = '<option value="" disabled selected>Gagal memuat data. Muat ulang halaman.</option>';
+                    console.error('Error fetching data:', error);
+                });
+        };
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.content-section').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('tab-active'));
+            document.getElementById('content-' + tabId).classList.remove('hidden');
+            document.getElementById('tab-' + tabId).classList.add('tab-active');
+        }
+
+        function updateDropdownNama() {
+            const kelasDipilih = document.getElementById("input-kelas").value;
+            const dropdownNama = document.getElementById("input-nama");
+            
+            dropdownNama.innerHTML = '<option value="" disabled selected>-- Pilih Nama Anda --</option>';
+            
+            if(kelasDipilih && databaseSpreadsheet[kelasDipilih]) {
+                dropdownNama.disabled = false;
+                const daftarMurid = databaseSpreadsheet[kelasDipilih];
+                
+                daftarMurid.sort().forEach(murid => {
+                    const option = document.createElement("option");
+                    option.value = murid;
+                    option.textContent = murid;
+                    dropdownNama.appendChild(option);
+                });
+            } else {
+                dropdownNama.disabled = true;
+                dropdownNama.innerHTML = '<option value="" disabled selected>-- Silakan pilih kelas terlebih dahulu --</option>';
+            }
+        }
+
+        function submitLaporan() {
+            const kelas = document.getElementById('input-kelas').value;
+            const nama = document.getElementById('input-nama').value;
+            const link = document.getElementById('input-link').value;
+
+            if(!kelas || !nama || !link) {
+                alert('Mohon lengkapi Kelas, Nama Murid, dan Link Video terlebih dahulu!');
+                return;
+            }
+
+            const btnSubmit = document.querySelector('button[onclick="submitLaporan()"]');
+            const originalText = btnSubmit.innerHTML;
+            btnSubmit.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Mengirim Data...';
+            btnSubmit.disabled = true;
+
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify({ kelas: kelas, nama: nama, link: link })
+            })
+            .then(response => response.json())
+            .then(result => {
+                if(result.status === 'success') {
+                    alert(`Tugas Berhasil Dikirim!\n\nNama: ${nama}\nKelas: ${kelas}\nLink: ${link}\n\nTerima kasih, data sudah masuk ke Spreadsheet Bapak Fajar S.Pt.`);
+                    document.getElementById('form-laporan').reset();
+                    updateDropdownNama(); 
+                } else {
+                    alert('Terjadi kesalahan: ' + result.message);
+                }
+            })
+            .catch(error => {
+                alert('Gagal mengirim data. Pastikan koneksi internet stabil.');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                btnSubmit.innerHTML = originalText;
+                btnSubmit.disabled = false;
+            });
+        }
+    </script>
+</body>
+</html>
